@@ -13,12 +13,17 @@ pico_sdk_init()
 
 add_executable(${EXE_NAME}
     src/main.c
+
     src/led_matrix.c
+    src/color.c
+    src/perlin.c
 
     include/led_matrix.h
+    include/color.h
+    include/perlin.h
 )
 
-target_include_directories(${EXE_NAME}
+target_include_directories(${EXE_NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
